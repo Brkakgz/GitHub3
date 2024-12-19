@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent A Car</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Rent A Car</h1>
+            <ul>
+                <li><a href="#" id="login-link">Giriş Yap</a></li>
+                <li><a href="#" id="register-link">Kayıt Ol</a></li>
+                <li><a href="#" id="rentals-link">Kiralamalarım</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Kullanıcı giriş/çıkış bölümleri -->
+        <section id="login-section" class="hidden">
+            <h2>Giriş Yap</h2>
+            <form id="login-form">
+                <input type="text" id="username" placeholder="Kullanıcı Adı" required>
+                <input type="password" id="password" placeholder="Şifre" required>
+                <button type="submit">Giriş Yap</button>
+            </form>
+            <div id="login-error" class="error"></div>
+        </section>
+
+        <!-- Kayıt Olma Bölümü -->
+        <section id="register-section" class="hidden">
+            <h2>Kayıt Ol</h2>
+            <form id="register-form">
+                <input type="text" id="reg-username" placeholder="Kullanıcı Adı" required>
+                <input type="password" id="reg-password" placeholder="Şifre" required>
+                <input type="text" id="reg-firstname" placeholder="Ad" required>
+                <input type="text" id="reg-lastname" placeholder="Soyad" required>
+                <input type="text" id="reg-nationalid" placeholder="TC Kimlik No" required>
+                <input type="text" id="reg-phone" placeholder="Telefon No" required>
+                <input type="text" id="reg-address" placeholder="Adres" required>
+                <button type="submit">Kayıt Ol</button>
+            </form>
+            <div id="register-error" class="error"></div>
+        </section>
+
+        <!-- Arabalar Bölümü -->
+        <section id="cars-section" class="hidden">
+            <h2>Mevcut Arabalar</h2>
+            <ul id="cars-list"></ul>
+        </section>
+
+        <!-- Profil Bölümü -->
+        <section id="profile-section" class="hidden">
+            <h2>Profil Bilgilerim</h2>
+            <form id="profile-form">
+                <label for="profile-firstname">Ad:</label>
+                <input type="text" id="profile-firstname" required>
+                <label for="profile-lastname">Soyad:</label>
+                <input type="text" id="profile-lastname" required>
+                <label for="profile-phone">Telefon:</label>
+                <input type="text" id="profile-phone" required>
+                <label for="profile-address">Adres:</label>
+                <input type="text" id="profile-address" required>
+                <button type="submit">Güncelle</button>
+            </form>
+        </section>
+
+        <!-- Kiralama Geçmişi -->
+        <section id="history-section" class="hidden">
+            <h2>Kiralama Geçmişim</h2>
+            <ul id="history-list"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Rent A Car</p>
+    </footer>
+
+    <!-- Modal -->
+    <div id="rent-modal" class="hidden">
+        <div class="modal-content">
+            <h2>Kiralama Detayları</h2>
+            <form id="rent-form">
+                <label for="startDate">Başlangıç Tarihi:</label>
+                <input type="date" id="startDate" required>
+                <label for="endDate">Bitiş Tarihi:</label>
+                <input type="date" id="endDate" required>
+                <button type="submit">Kirala</button>
+            </form>
+            <button onclick="closeModal()">Kapat</button>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/api.js"></script>
+</body>
+</html>

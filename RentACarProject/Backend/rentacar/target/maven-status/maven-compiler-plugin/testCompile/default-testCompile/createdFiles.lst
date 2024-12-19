@@ -1,0 +1,4 @@
+com\example\rentacar\services\UserServiceTest.class
+com\example\rentacar\RentacarApplicationTests.class
+com\example\rentacar\services\CarServiceTest.class
+com\example\rentacar\services\RentalServiceTest.class

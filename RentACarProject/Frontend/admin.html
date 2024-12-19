@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Paneli - Rent A Car</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Admin Paneli</h1>
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="#" id="logout-link">Çıkış Yap</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Tüm Kiralamalar Bölümü -->
+        <section id="admin-rentals">
+            <h2>Tüm Kiralamalar</h2>
+            <ul id="all-rentals-list"></ul>
+        </section>
+
+        <!-- Belirli Araba Kiralamaları Bölümü -->
+        <section id="car-rentals" class="hidden">
+            <h2>Belirli Araba Kiralamaları</h2>
+            <ul id="car-rentals-list"></ul>
+            <button onclick="showSection('admin-rentals')">Geri Dön</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Rent A Car</p>
+    </footer>
+
+    <script src="js/admin.js"></script>
+    <script src="js/api.js"></script>
+</body>
+</html>
